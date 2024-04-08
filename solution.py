@@ -35,7 +35,7 @@ def isPrime(number:int)->bool:
             return False
     return True
 
-def select_prime_numbers_in_range(min:int, max:int)-> Union[list[int], str]:
+def select_prime_numbers_in_range(min:int, max:int)-> list[int]:
     return [x for x in range(min, max) if isPrime(x)]
 
 assert select_prime_numbers_in_range(3,50) == [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47], "Error"
