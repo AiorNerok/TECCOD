@@ -70,11 +70,10 @@ point = Point(5,5)
 print("get coord: ", point)
 point = Point(15,15)
 print("updated: ", point)
-print(f"distance_to: %.2f" % point.distance_to(20,20))
+print(f"distance_to (20,20): %.2f" % point.distance_to(20,20))
 ################################################################################################################################################################
 
 # 4. Написать программу, которая сортирует список строк по длине, сначала по возрастанию, а затем по убыванию.
-from typing import Optional
 from enum import Enum
 
 class DirectionClass(Enum):
@@ -84,7 +83,7 @@ class DirectionClass(Enum):
 test_string = ['Написать', 'программу,', 'которая', 'сортирует', 'список', 'строк', 'по', 'длине,', 'сначала', 'по', 'возрастанию,', 'а', 'затем', 'по', 'убыванию.']
 
 @dataclass
-class Sort_list:
+class Sorted_To_Direction:
     data: list[str]
     direction: Union[DirectionClass] = Union[ DirectionClass ]
 
@@ -97,7 +96,7 @@ class Sort_list:
         return list(sorted(self.data, key=len))
 
 
-l = Sort_list(test_string)
+l = Sorted_To_Direction(test_string)
 
 print(l.sort())
 print(l.sort())
